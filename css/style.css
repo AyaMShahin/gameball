@@ -1,0 +1,496 @@
+/* Common Styles */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Recoleta";
+  src: url(/fonts/Recoleta-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Recoleta Regular";
+  src: url(/fonts/Recoleta-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+.boldreg {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mtop {
+  margin-top: 20px;
+}
+/* Page container */
+.main-container {
+  width: 85%;
+  margin: auto;
+}
+/* Fontawesome icons styles */
+.icons {
+  font-size: 13px;
+  padding: 0 2px;
+}
+.fregular {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+.title {
+  padding: 12px 16px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #fff, rgba(254, 207, 72, 0.15));
+  /* background-color: rgb(0, 0, 0, 0.7); // alpha= 0.7 the same as opacity */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+/* Book a demo Section */
+.book {
+  width: 100%; /* Full width */
+  height: 50px;
+  background-color: #ffcf48;
+  position: sticky; /* Set the section to fixed position */
+  position: -webkit-sticky; /* Safari */
+  top: 0; /* Position the section at the top of the page */
+  z-index: 10;
+}
+
+/* Place text in the middle of the element */
+.book p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.book a {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin-left: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+.book a:hover {
+  border: 0;
+}
+/* End of book Section */
+
+/* Navbar Styles */
+.container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+/* Styling website logo */
+.topnav .logo {
+  display: flex;
+  width: auto;
+  justify-self: start; /* aligns the logo at the beginning of the container*/
+  align-items: center;
+}
+.topnav .logo .logoimg {
+  width: 194px;
+  height: 50px;
+  padding: 0;
+}
+.topnav a {
+  color: #000;
+  padding: 14px 16px;
+  text-decoration: none;
+  vertical-align: auto;
+  font-size: 16px;
+}
+.topnav a .logoimg {
+  width: 100%;
+  height: 100%;
+}
+.topnav .links {
+  display: flex;
+  justify-self: center; /* aligns the logo at the center of the container*/
+}
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Styling nav buttons */
+.topnav .buttons {
+  display: flex;
+  justify-content: end;
+}
+.topnav .buttons button {
+  background-color: #0d0e10;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 25px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+.topnav .buttons button:hover {
+  background-color: #ffcf48;
+  color: #000;
+  transition: 0.5s;
+}
+/* dropdown styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: inline-start;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  /* text-decoration: none; */
+}
+
+li.dropdown {
+  display: inline-block;
+}
+/* Product dropdown */
+.dropdown .row {
+  justify-content: space-around;
+}
+.dropdown-content .im {
+  width: 40px;
+  height: 40px;
+}
+.dropdown-content .management {
+  display: flex;
+  align-items: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 70%;
+  min-width: 160px;
+  max-width: 1280px;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 30px 50px 0 rgb(0 0 0 / 8%);
+  z-index: 9;
+}
+.dropdown .content1 {
+  top: 48%;
+  left: 50%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: 3s;
+}
+.dropdown-content .drpleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 25px;
+}
+
+.dropdown-content .frecoleta {
+  font-family: "Recoleta", Georgia, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.dropdown-content .fregular {
+  line-height: 1.6;
+}
+.dropdown-content .drpright {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+.management div:hover {
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
+}
+/* End of product dropdown */
+
+/* Resources dropdown */
+.dropdown .content2 {
+  top: 33%;
+  left: 50%;
+  width: 100%;
+}
+.dropdown .item-content {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: left;
+  width: 33%;
+}
+.dropdown .dropdown-content .item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: left;
+  transition: all 350ms ease;
+  padding: 32px;
+}
+.dropdown .dropdown-content .item:hover {
+  box-shadow: 0 10px 100px 0 rgb(0 0 0 / 10%);
+}
+.dropdown-content .item .square {
+  width: 50px;
+  height: 50px;
+  background-color: #ffcf48;
+  border-radius: 8px;
+}
+.dropdown-content .mainp {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+.dropdown-content .contentp {
+  font-weight: 300;
+  max-width: 250px;
+  color: #989595;
+}
+/* End of resourses dropdown */
+/* Pricing dropdown */
+.dropdown .content3 {
+  max-width: 1000px;
+  top: 39%;
+  left: 50%;
+}
+.dropdown .content3 .item-content1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.content3 .item-content1 .square1 {
+  width: 50px;
+  height: 50px;
+  background-color: #0d0e10;
+  border-radius: 8px;
+}
+.content3,
+.item-content1 .texts {
+  padding: 10px 0;
+}
+.content3 .item-content1 .clk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 15px;
+  font-weight: 700;
+}
+.item-content1 .clk .btn1 {
+  border-bottom: 1px solid #d9dceb6b;
+  line-height: 2;
+}
+.item-content1 .clk .btn1 img:hover {
+  transition: ease 1s;
+  rotate: -50deg;
+}
+/* End of Pricing dropdown */
+
+/* Section 2 styling */
+.description .left-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+.left-content h1 {
+  font-family: "Recoleta";
+  font-size: 57px;
+  margin-bottom: 12px;
+}
+.left-content .text-desc {
+  color: #0d0e10;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 492px;
+}
+.left-content .desc-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left-content .desc-btns .not-shopify {
+  margin-left: 25px;
+}
+.left-content .not-shopify .shop {
+  color: #313131;
+}
+.left-content .not-shopify .btnlink {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 1px solid #d9dceb6b;
+  line-height: 2;
+}
+.left-content .not-shopify .btnlink:hover {
+  border-bottom: 0;
+  transition: ease 1s;
+  cursor: pointer;
+}
+.left-content .not-shopify .btn1 img:hover {
+  transition: ease 1s;
+  rotate: -50deg;
+}
+.left-content .checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 440px;
+}
+.left-content .checkbox .check1 {
+  display: flex;
+  flex-direction: column;
+}
+.left-content .checkbox .check1 p {
+  max-width: 218px;
+  margin-top: 10px;
+  color: #313131;
+}
+.left-content .checkbox .check p {
+  max-width: 180px;
+}
+/* left-content end */
+.description .right-content {
+  position: relative;
+  width: 50%;
+}
+.description .right-content .hero1 {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+.description .right-content .hero2 {
+  position: absolute;
+  right: -36px;
+  top: 100px;
+  z-index: 3;
+}
+.description .right-content .hero3 {
+  position: absolute;
+  top: 422px;
+  z-index: 3;
+}
+
+.description .right-content .hero4 {
+  position: absolute;
+  right: -36px;
+  top: 479px;
+  z-index: 1;
+}
+/* End of section 2 */
+
+/* Section 3 Trusted brands */
+.trustedBrands .brands-content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  border-radius: 40px;
+  padding: 88px;
+  margin-top: 80px;
+  text-align: center;
+  animation: slide-up 2s;
+}
+@keyframes slide-up {
+  from {
+    opacity: 0.2;
+    transform: translateY(100%);
+    /* transition: 0.5s ease; */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.trustedBrands .brands-content .bus {
+  font-size: 48px;
+  font-family: "Recoleta";
+  margin-bottom: 20px;
+}
+.trustedBrands .brands-content .brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trustedBrands .brands-content .brands img {
+  margin-right: 24px;
+}
+/* End of section 3 */
+
+/* Features section */
+.features {
+  margin-top: 80px;
+}
+.features .header {
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  animation: slide-up 3s;
+}
+.features .header .sub-head {
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d0e10;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.features .header .head-feature {
+  font-family: "Recoleta";
+  font-size: 48px;
+  line-height: 1.1;
+  margin-top: 15px;
+}
+.features .features-list .icon-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #ffcf48;
+}
