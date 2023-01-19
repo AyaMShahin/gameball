@@ -17,7 +17,6 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 18px;
-  height: 2000px;
 }
 a {
   text-decoration: none;
@@ -187,17 +186,17 @@ header {
   transition: 0.5s;
 }
 /* dropdown styles */
-ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-li {
+header li {
   float: inline-start;
 }
 
-li a,
+header li a,
 .dropbtn {
   display: inline-block;
   text-align: center;
@@ -651,8 +650,15 @@ li.dropdown {
 }
 /* End Role Section */
 /* Growth section */
+.growth {
+  position: relative;
+}
 .growth .growth-content {
   /* border: 2px solid #000; */
+  width: 80%;
+  position: absolute;
+  margin: auto;
+  bottom: -70px;
   background-color: #ffcf48;
   border-radius: 40px;
   padding: 80px;
@@ -672,7 +678,7 @@ li.dropdown {
   background-color: #0d0e10;
   color: #fff;
   font-weight: bold;
-  padding: 20px 25px;
+  /* padding: 20px 25px; */
   text-align: center;
   border-radius: 10px;
   border: 2px solid #000;
@@ -691,6 +697,8 @@ footer {
 }
 footer .fcontent {
   padding-top: 100px;
+  justify-content: space-around;
+  border-bottom: 1px solid #8b8b8b;
 }
 .fcontent .footer-left {
   justify-content: space-around;
@@ -726,6 +734,47 @@ footer .fcontent {
   font-size: 14px;
 }
 /* end of Left content */
-.fcontent .footer-right .list {
+.fcontent .footer-right .row {
+  justify-content: space-around;
+}
+.fcontent .footer-right ul,
+.footer-right a {
   color: #fff;
+  list-style-type: none;
+  max-width: 255px;
+  font-size: 15px;
+}
+footer .footer-right ul li {
+  margin: 15px 0;
+}
+.fcontent .footer-right .list .list-txtb,
+.fcontent .footer-right .list .list-txtb a {
+  font-size: 18px;
+  font-weight: 600;
+}
+.fcontent .footer-right ul .link:hover {
+  color: #8b8b8b;
+}
+footer .contentlast {
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 16px;
+  align-items: center;
+}
+.contentlast p a {
+  padding-left: 4px;
+  color: #ffcf48;
+}
+.contentlast .media {
+  margin-right: 30px;
+}
+.contentlast .media a {
+  margin-left: 30px;
+  transition: 0.3s;
+}
+.contentlast .media a:hover {
+  transform: translate(0, -10px); /* animation: slide-footer 1s ease; */
 }
