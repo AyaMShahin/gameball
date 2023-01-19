@@ -956,6 +956,22 @@ li.dropdown {
   animation: move-left 30s linear infinite;
   /* infinite make reapeat the animation indefinitely */
 }
+.up-content .row {
+  align-content: space-around;
+  align-items: center;
+}
+.creviews .up-content .up-items p,
+.creviews .down-content .down-items p {
+  margin-top: 25px;
+}
+.item-content .item-title {
+  margin-left: 25px;
+}
+.item-content .item-title h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
 .creviews .down-content .down-items {
   animation: move-right 30s linear infinite; /* Animation start from right to left of the screen */
   transform: translateX(-100%);
@@ -1116,7 +1132,7 @@ li.dropdown {
 /* Footer Styling */
 footer {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #0d0e10;
 }
 footer .fcontent {
@@ -1202,4 +1218,104 @@ footer .contentlast {
 .contentlast .media a:hover {
   transform: translate(0, -10px); /* animation: slide-footer 1s ease; */
 }
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  footer .main-container {
+    width: 100%;
+  }
+  footer .fcontent {
+    flex-direction: column;
+    padding-top: 130px;
+  }
+  footer .fcontent .footer-left {
+    justify-content: space-around;
+  }
+  .fcontent .footer-left .link-list {
+    margin-left: 50px;
+  }
+  footer .fcontent .footer-left img {
+    margin-left: 50px;
+  }
+  .fcontent .footer-left .left-cont label {
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 110px;
+    margin-left: 50px;
+  }
+  .footer-left input[type="email"] {
+    margin-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    width: 70%;
+  }
+  .fcontent .footer-right .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  .fcontent .footer-right .list {
+    margin-top: 20px;
+  }
+
+  footer .contentlast {
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 30px;
+    /* text-align: left; */
+    align-items: center;
+  }
+  .contentlast p {
+    margin-bottom: 30px;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  footer .main-container {
+    width: 100%;
+  }
+  footer .fcontent {
+    flex-direction: column;
+    padding-top: 183px;
+  }
+  footer .fcontent .footer-left {
+    justify-content: space-around;
+  }
+  footer .fcontent .footer-left img {
+    margin-left: 38px;
+  }
+  .fcontent .footer-left .left-cont label {
+    margin-top: 110px;
+    margin-left: 38px;
+  }
+  .footer-left input[type="email"] {
+    margin-left: 38px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    width: 50%;
+  }
+  .fcontent .footer-right .row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .fcontent .footer-right .list {
+    margin-top: 20px;
+  }
+
+  footer .contentlast {
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 30px;
+    /* text-align: left; */
+    align-items: center;
+  }
+  .contentlast p {
+    margin-bottom: 30px;
+  }
+}
+
 /* footer end */
