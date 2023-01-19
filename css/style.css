@@ -17,6 +17,11 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 18px;
+  height: 2000px;
+}
+a {
+  text-decoration: none;
+  color: #0d0e10;
 }
 .boldreg {
   font-size: 20px;
@@ -59,12 +64,33 @@ body {
   top: 0;
   left: 0;
 }
+.btnlink {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  /* border-bottom: 1px solid #d9dceb6b; */
+  line-height: 2;
+}
+.frecoleta-title {
+  font-family: "Recoleta";
+  font-size: 48px;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  font-size: 16px;
+}
+
+header {
+  margin-top: 50px;
+}
+
 /* Book a demo Section */
 .book {
   width: 100%; /* Full width */
   height: 50px;
   background-color: #ffcf48;
-  position: sticky; /* Set the section to fixed position */
+  position: fixed; /* Set the section to fixed position */
   position: -webkit-sticky; /* Safari */
   top: 0; /* Position the section at the top of the page */
   z-index: 10;
@@ -340,7 +366,7 @@ li.dropdown {
 }
 .left-content h1 {
   font-family: "Recoleta";
-  font-size: 57px;
+  font-size: 56px;
   margin-bottom: 12px;
 }
 .left-content .text-desc {
@@ -402,12 +428,12 @@ li.dropdown {
 }
 .description .right-content .hero1 {
   position: absolute;
-  right: 0;
+  right: 17px;
   z-index: 2;
 }
 .description .right-content .hero2 {
   position: absolute;
-  right: -36px;
+  right: -24px;
   top: 100px;
   z-index: 3;
 }
@@ -419,7 +445,7 @@ li.dropdown {
 
 .description .right-content .hero4 {
   position: absolute;
-  right: -36px;
+  right: 0px;
   top: 479px;
   z-index: 1;
 }
@@ -465,6 +491,7 @@ li.dropdown {
 /* Features section */
 .features {
   margin-top: 80px;
+  animation: slide-up 4s;
 }
 .features .header {
   max-width: 800px;
@@ -487,10 +514,215 @@ li.dropdown {
   line-height: 1.1;
   margin-top: 15px;
 }
+.features .features-list {
+  margin-top: 80px;
+  justify-content: center;
+}
+.features .features-list .wrapper {
+  min-width: 180px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.features .features-list .feature-item {
+  text-align: center;
+}
 .features .features-list .icon-img {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: #ffcf48;
+  text-align: center;
+  margin: auto;
 }
+.features .feature-item p {
+  font-weight: 600;
+  max-width: 130px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.features .list-content {
+  width: 100%;
+  justify-content: space-between;
+  padding: 54px 111px;
+  align-items: center;
+}
+.list-content .list-desc h2 {
+  font-size: 42px;
+  font-family: "Recoleta";
+  margin-bottom: 10px;
+}
+.list-content .list-desc p {
+  text-align: left;
+  margin-bottom: 10px;
+  max-width: 500px;
+  color: #40454f;
+}
+/* end features */
+
+/* Customer section */
+.customer-engage {
+  margin-top: 100px;
+  text-align: center;
+  animation: slide-up 5s;
+  margin-bottom: 50px;
+}
+.customer-engage .column {
+  align-items: center;
+}
+.customer-engage .text-content {
+  max-width: 617px;
+  /* justify-content: center; */
+}
+.customer-engage .text-content p {
+  margin: 18px 0 50px 0;
+  color: #40454f;
+}
+.customer-engage .numbers {
+  border-top: 1px solid #b6b2b269;
+  justify-content: space-around;
+  width: 100%;
+}
+.customer-engage .numbers .returns {
+  width: 33%;
+  border-right: 1px solid #b6b2b269;
+}
+.customer-engage .numbers .num {
+  font-size: 60px;
+  margin-top: 34px;
+  margin-bottom: 16px;
+}
+.customer-engage .numbers .borderless {
+  border: 0;
+}
+.customer-engage .returns span {
+  color: #40454f;
+}
+/* End customer section */
+
+/* Role section */
+.roles {
+  background-color: #ffcf48;
+  /* text-align: center; */
+}
+.roles .texts {
+  padding-top: 100px;
+  text-align: center;
+}
+.roles .texts span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.roles .main-content {
+  width: 60%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+.main-content .left {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-container .left .role-desc {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+.main-container .left .role-desc p {
+  margin-top: 25px;
+}
+.main-content .main-content .left .icondesc {
+  margin-bottom: 30px;
+}
+.main-content .left .icondesc span {
+  margin-left: 15px;
+  color: #0d0e10;
+  font-weight: 700;
+  font-size: 24px;
+}
+.main-content .left .icondesc div i {
+  font-size: 24px;
+}
+/* End Role Section */
+/* Growth section */
+.growth .growth-content {
+  /* border: 2px solid #000; */
+  background-color: #ffcf48;
+  border-radius: 40px;
+  padding: 80px;
+  margin-top: 80px;
+  text-align: center;
+  animation: slide-up 2s;
+  align-items: center;
+}
+.growth .growth-content p {
+  max-width: 80%;
+  margin: auto;
+  margin: 20px 0;
+}
+.growth .growth-content button {
+  width: 13%;
+  height: 60px;
+  background-color: #0d0e10;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 25px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+.growth .growth-content button:hover {
+  background-color: #ffcf48;
+  color: #000;
+  transition: 0.5s;
+}
+/* End of growth section */
+
+/* Footer Styling */
+footer {
+  background-color: #0d0e10;
+}
+footer .fcontent {
+  padding-top: 100px;
+}
+.fcontent .footer-left {
+  justify-content: space-around;
+}
+.fcontent .footer-left .left-cont label {
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-bottom: 25px;
+}
+.footer-left input[type="email"] {
+  border: 1px none #000;
+  border-radius: 12px;
+  height: 38px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 23px;
+  margin-right: 20px;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+.footer-left .btns button {
+  height: 60px;
+  background-color: #ffcf48;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding: 20px 25px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #0d0e10;
+  cursor: pointer;
+  font-size: 14px;
+}
+/* end of Left content */
