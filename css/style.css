@@ -726,3 +726,6 @@ footer .fcontent {
   font-size: 14px;
 }
 /* end of Left content */
+.fcontent .footer-right .list {
+  color: #fff;
+}
