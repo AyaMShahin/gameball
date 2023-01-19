@@ -19,6 +19,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -466,7 +467,7 @@ li.dropdown {
   padding: 88px;
   margin-top: 80px;
   text-align: center;
-  animation: slide-up 2s;
+  /* animation: slide-up 2s; */
 }
 /* Slide up animation */
 @keyframes slide-up {
@@ -498,13 +499,13 @@ li.dropdown {
 /* Features section */
 .features {
   margin-top: 80px;
-  animation: slide-up 4s;
+  /* animation: slide-up 4s; */
 }
 .features .header {
   max-width: 800px;
   text-align: center;
   margin: auto;
-  animation: slide-up 3s;
+  /* animation: slide-up 3s; */
 }
 .features .header .sub-head {
   font-family: "Outfit";
@@ -577,7 +578,7 @@ li.dropdown {
 .customer-engage {
   margin-top: 100px;
   text-align: center;
-  animation: slide-up 5s;
+  /* animation: slide-up 5s; */
   margin-bottom: 50px;
 }
 .customer-engage .column {
@@ -709,6 +710,7 @@ li.dropdown {
   width: 80%;
   position: absolute;
   margin: auto;
+  left: 9%;
   bottom: -70px;
   background-color: #ffcf48;
   border-radius: 40px;
@@ -748,6 +750,7 @@ li.dropdown {
 }
 /* Footer Styling */
 footer {
+  width: 100%;
   background-color: #0d0e10;
 }
 footer .fcontent {
@@ -834,3 +837,15 @@ footer .contentlast {
   transform: translate(0, -10px); /* animation: slide-footer 1s ease; */
 }
 /* footer end */
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
