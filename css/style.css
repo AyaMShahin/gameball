@@ -25,6 +25,19 @@ a {
   text-decoration: none;
   color: #0d0e10;
 }
+/* Slide up animation on scroll */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active1 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .boldreg {
   font-size: 20px;
   font-weight: 600;
@@ -94,7 +107,7 @@ header {
   height: 50px;
   background-color: #ffcf48;
   position: fixed; /* Set the section to fixed position */
-  position: -webkit-sticky; /* Safari */
+  /* position: -webkit-sticky; Safari */
   top: 0; /* Position the section at the top of the page */
   z-index: 10;
 }
@@ -106,6 +119,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 16px;
 }
 .book a {
   font-size: 16px;
@@ -117,6 +131,35 @@ header {
 }
 .book a:hover {
   border: 0;
+}
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .book {
+    width: 100%;
+  }
+  .book p {
+    text-align: center;
+    top: 50%;
+    left: 45%;
+    font-size: 16px;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .book {
+    width: 100%;
+  }
+  .book p {
+    width: 299px;
+    text-align: left;
+    top: 50%;
+    left: 10%;
+    top: 50%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 15px;
+  }
 }
 /* End of book Section */
 
@@ -164,8 +207,8 @@ header {
   justify-self: center; /* aligns the logo at the center of the container*/
 }
 /* Add an active class to highlight the current page */
-.topnav a.active {
-  font-weight: bold;
+.topnav .active {
+  font-weight: 600 !important;
   color: #000;
 }
 
@@ -189,6 +232,7 @@ header {
   color: #000;
   transition: 0.5s;
 }
+
 /* dropdown styles */
 header ul {
   list-style-type: none;
@@ -227,6 +271,7 @@ li.dropdown {
   display: none;
   position: absolute;
   background-color: #fff;
+  clear: right;
   width: 70%;
   min-width: 160px;
   max-width: 1280px;
@@ -370,6 +415,28 @@ li.dropdown {
   flex-direction: column;
   margin-top: 55px;
 }
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .description .row {
+    align-content: space-around;
+  }
+  .description .left-content {
+    width: 100%;
+  }
+  .description .right-content {
+    width: 100%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .description .left-content {
+    width: 100%;
+  }
+  .description .right-content {
+    width: 100%;
+  }
+}
 .left-content h1 {
   font-family: "Recoleta";
   font-size: 56px;
@@ -494,6 +561,38 @@ li.dropdown {
 .trustedBrands .brands-content .brands img {
   margin-right: 24px;
 }
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .trustedBrands .brands-content {
+    padding: 60px;
+  }
+  .trustedBrands .brands-content .bus {
+    font-size: 38px;
+  }
+  .trustedBrands .brands-content .brands {
+    flex-wrap: wrap;
+    flex-shrink: 0.5;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .trustedBrands .brands-content {
+    padding: 36px;
+  }
+  .trustedBrands .brands-content .bus {
+    font-size: 25px;
+  }
+  .trustedBrands .brands-content .brands {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  .trustedBrands .brands-content .brands img {
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+}
 /* End of section 3 */
 
 /* Features section */
@@ -572,6 +671,67 @@ li.dropdown {
   max-width: 500px;
   color: #40454f;
 }
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .features .header .head-feature {
+    font-size: 42px;
+  }
+  .features .features-list {
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .features .list-content {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .features .list-content .list-img {
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    /* padding: 54px 111px; */
+    align-items: center;
+    align-content: center;
+  }
+  .features .feature-item p {
+    font-weight: 600;
+    max-width: 130px;
+    margin-top: 15px;
+    line-height: 1.5;
+  }
+  .list-content .list-desc {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .list-content .list-desc p {
+    text-align: center;
+    margin-bottom: 10px;
+    margin: auto;
+    max-width: 500px;
+    color: #40454f;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .features .list-content .list-img {
+    align-items: center;
+    align-content: center;
+  }
+  .list-content .list-desc {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .list-content .list-desc h2 {
+    font-size: 30px;
+    font-family: "Recoleta";
+    margin-bottom: 10px;
+  }
+}
 /* end features */
 
 /* Customer section */
@@ -611,6 +771,59 @@ li.dropdown {
 }
 .customer-engage .returns span {
   color: #40454f;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .customer-engage .text-content h2 {
+    font-size: 42px;
+  }
+  .customer-engage .text-content {
+    max-width: 600px;
+    /* justify-content: center; */
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .customer-engage .row {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .customer-engage .text-content {
+    max-width: 617px;
+    /* justify-content: center; */
+  }
+  .customer-engage .text-content h2 {
+    font-size: 30px;
+  }
+  .customer-engage .text-content p {
+    margin: 18px 0 50px 0;
+    color: #40454f;
+    font-size: 16px;
+  }
+
+  .customer-engage .numbers {
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+
+  .customer-engage .numbers .num {
+    font-size: 40px;
+    margin-top: 34px;
+    margin-bottom: 16px;
+  }
+  .customer-engage .numbers .returns {
+    width: 33%;
+    border-right: 0;
+  }
+  .customer-engage .returns span {
+    color: #40454f;
+    max-width: 90px;
+  }
 }
 /* End customer section */
 
@@ -657,6 +870,64 @@ li.dropdown {
 .main-content .left .icondesc div i {
   font-size: 24px;
 }
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .roles .main-content {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    text-align: left;
+  }
+  .main-content .left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .main-container .left .role-desc {
+    margin-top: 39px;
+    margin-bottom: 35px;
+    width: 800px;
+    border: 1px solid #927831;
+    padding: 30px;
+    border-radius: 12px;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .roles .texts h2 {
+    font-size: 30px;
+  }
+  .roles .main-content {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    text-align: left;
+  }
+  .main-content .left {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .main-container .left .role-desc {
+    margin-top: 39px;
+    margin-bottom: 35px;
+    width: 400px;
+    border: 1px solid #927831;
+    padding: 30px;
+    border-radius: 12px;
+  }
+}
+
 /* End Role Section */
 
 /* Section Customer Reviews */
@@ -707,21 +978,24 @@ li.dropdown {
 }
 .growth .growth-content {
   /* border: 2px solid #000; */
-  width: 80%;
+  width: 90%;
   position: absolute;
   margin: auto;
-  left: 9%;
-  bottom: -70px;
+  left: 5%;
+  bottom: -172px;
   background-color: #ffcf48;
   border-radius: 40px;
   padding: 80px;
   margin-top: 80px;
   text-align: center;
-  animation: slide-up 2s;
+  /* animation: slide-up 2s; */
   align-items: center;
 }
+.growth .growth-content .text-growth {
+  font-size: 40px;
+}
 .growth .growth-content p {
-  max-width: 80%;
+  max-width: 86%;
   margin: auto;
   margin: 20px 0;
 }
@@ -742,19 +1016,111 @@ li.dropdown {
   color: #000;
   transition: 0.5s;
 }
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .growth {
+    position: static;
+  }
+  .growth .main-container {
+    width: 100%;
+  }
+  .growth .growth-content {
+    position: static;
+    /* border: 2px solid #000; */
+    width: 100%;
+    background-color: #ffcf48;
+    border-radius: 0;
+    padding: 80px;
+    margin-top: 80px;
+    text-align: center;
+    /* animation: slide-up 2s; */
+    align-items: center;
+  }
+  .growth .reveal {
+    position: static;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0s;
+  }
+  .growth .growth-content p {
+    max-width: 100%;
+    margin: 44px 0px;
+  }
+
+  .growth .growth-content button {
+    width: 28%;
+    height: 60px;
+    background-color: #0d0e10;
+    color: #fff;
+    font-weight: bold;
+    /* padding: 20px 25px; */
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .growth {
+    position: static;
+  }
+  .growth .main-container {
+    width: 100%;
+  }
+  .growth .growth-content {
+    position: static;
+    /* border: 2px solid #000; */
+    width: 100%;
+    background-color: #ffcf48;
+    border-radius: 0;
+    padding: 80px;
+    margin-top: 80px;
+    text-align: center;
+    /* animation: slide-up 2s; */
+    align-items: center;
+  }
+  .growth .reveal {
+    position: static;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0s;
+  }
+  .growth .growth-content p {
+    max-width: 100%;
+    margin: 44px 0px;
+  }
+
+  .growth .growth-content button {
+    width: 44%;
+    height: 60px;
+    background-color: #0d0e10;
+    color: #fff;
+    font-weight: bold;
+    /* padding: 20px 25px; */
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+}
+
 /* End of growth section */
 .br {
   width: 100vw;
-  height: 50vh;
+  height: 40vh;
   background-color: #fff;
 }
 /* Footer Styling */
 footer {
   width: 100%;
+  height: 100vh;
   background-color: #0d0e10;
 }
 footer .fcontent {
-  padding-top: 100px;
+  padding-top: 295px;
   justify-content: space-around;
   border-bottom: 1px solid #8b8b8b;
 }
@@ -816,7 +1182,7 @@ footer .footer-right ul li {
 footer .contentlast {
   overflow: hidden;
   padding-top: 40px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   justify-content: space-between;
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 16px;
@@ -837,15 +1203,3 @@ footer .contentlast {
   transform: translate(0, -10px); /* animation: slide-footer 1s ease; */
 }
 /* footer end */
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}

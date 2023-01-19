@@ -1,3 +1,5 @@
+// Responsive nav
+
 // The image moves just slightly according to where I move my mouse.
 
 const hero1 = document.querySelector(".hero1"),
@@ -13,9 +15,10 @@ root.addEventListener("mousemove", (e) => {
   hero1.style.transform = `translate(${x / 40}px,${y / 50}px)`;
   hero2.style.transform = `translate(${x / 25}px,${y / 50}px)`;
   hero3.style.transform = `translate(${x / 15}px,${y / 50}px)`;
-  hero4.style.transform = `translate(${x / 10}px,${y / 50}px)`;
+  hero4.style.transform = `translate(${x / 50}px,${y / 60}px)`;
 });
 
+// Slide up animation on scroll
 let section = document.querySelectorAll("section");
 let menu = document.querySelectorAll("header nav a");
 
@@ -28,7 +31,7 @@ window.onscroll = () => {
 
     if (top >= offset && top < offset + height) {
       menu.forEach((link) => {
-        link.classList.remove("active");
+        link.classList.remove("active1");
         // document
         //   .querySelector("header nav ul a[href*=" + classs + "]")
         //   .classList.add("active");
@@ -46,9 +49,9 @@ function reveal() {
     var elementVisible = 150;
 
     if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+      reveals[i].classList.add("active1");
     } else {
-      reveals[i].classList.remove("active");
+      reveals[i].classList.remove("active1");
     }
   }
 }
