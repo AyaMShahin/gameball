@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* Importing custom fonts */
 @font-face {
   font-family: "Recoleta";
   src: url(/fonts/Recoleta-Bold.ttf) format("truetype");
@@ -17,6 +18,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 18px;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -74,6 +76,7 @@ a {
   font-family: "Recoleta";
   font-size: 48px;
 }
+/* input placeholder style*/
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #fff;
@@ -228,7 +231,7 @@ li.dropdown {
   max-width: 1280px;
   border-radius: 15px;
   transform: translate(-50%, -50%);
-  box-shadow: 0 30px 50px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 21px 37px 0 rgb(0 0 0 / 8%);
   z-index: 9;
 }
 .dropdown .content1 {
@@ -318,9 +321,12 @@ li.dropdown {
 /* End of resourses dropdown */
 /* Pricing dropdown */
 .dropdown .content3 {
-  max-width: 1000px;
+  max-width: 792px;
   top: 39%;
   left: 50%;
+}
+.dropdown .content3 .row {
+  justify-content: space-between;
 }
 .dropdown .content3 .item-content1 {
   display: flex;
@@ -405,12 +411,13 @@ li.dropdown {
 .left-content .checkbox {
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  max-width: 440px;
+  margin-top: 50px;
+  max-width: 393px;
 }
 .left-content .checkbox .check1 {
   display: flex;
   flex-direction: column;
+  margin-right: 36px;
 }
 .left-content .checkbox .check1 p {
   max-width: 218px;
@@ -461,6 +468,7 @@ li.dropdown {
   text-align: center;
   animation: slide-up 2s;
 }
+/* Slide up animation */
 @keyframes slide-up {
   from {
     opacity: 0.2;
@@ -649,6 +657,49 @@ li.dropdown {
   font-size: 24px;
 }
 /* End Role Section */
+
+/* Section Customer Reviews */
+.creviews {
+  margin-top: 100px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.creviews .up-content,
+.creviews .down-content {
+  margin-top: 55px;
+  width: 4000%;
+}
+.creviews .up-content .up-items,
+.creviews .down-content .down-items {
+  margin-right: 40px;
+  text-align: left;
+  border-radius: 12px;
+  max-width: 600px;
+  padding: 56px 28px 50px;
+  box-shadow: 17px 17px 200px 0 rgb(64 69 79 / 6%);
+  transform: translateX(
+    0%
+  ); /* Animation start from left to right of the screen */
+  /* Add the animation */
+  animation: move-left 30s linear infinite;
+  /* infinite make reapeat the animation indefinitely */
+}
+.creviews .down-content .down-items {
+  animation: move-right 30s linear infinite; /* Animation start from right to left of the screen */
+  transform: translateX(-100%);
+}
+
+/* Create the animation */
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-right {
+  to {
+    transform: translateX(100%);
+  }
+}
 /* Growth section */
 .growth {
   position: relative;
@@ -690,7 +741,11 @@ li.dropdown {
   transition: 0.5s;
 }
 /* End of growth section */
-
+.br {
+  width: 100vw;
+  height: 50vh;
+  background-color: #fff;
+}
 /* Footer Styling */
 footer {
   background-color: #0d0e10;
@@ -778,3 +833,4 @@ footer .contentlast {
 .contentlast .media a:hover {
   transform: translate(0, -10px); /* animation: slide-footer 1s ease; */
 }
+/* footer end */
